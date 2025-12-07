@@ -1,0 +1,53 @@
+<?php
+?>
+<DOCTYPE html>
+<html lang = "vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>PHT Chương 5 - MVC</title>
+        <style>
+            table
+            {
+                width : 100%;
+                border-collapse : collapse;
+            }
+            th, td 
+            {
+                border : 1px solid #ddd;
+                padding : 8px;
+            }
+            th
+            {
+                bachground-color : #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Thêm sinh viên mới (Kiến trúc MVC)</h2>
+            <form action="index.php" method="POST">
+                Tên sinh viên: <input type="text" name="ten_sinh_vien" required>
+                Email: <input type="email" name="email" required>
+                <button type="submit">Thêm</button>
+            </form>
+        <h2>Danh sách sinh viên (Kiến trúc MVC)</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Tên sinh viên</th>
+                <th>Email</th>
+                <th>Ngày tạo</th>
+            </tr>
+            <?php
+                foreach($danh_sach_sv as $sv)
+                {
+                    echo "<tr>";
+                    echo "<td>" . htmlspecialchars(($sv['id'])) . "</td>";
+                    echo "<td>". htmlspecialchars(($sv["ten_sinh_vien"])) . "</td>";
+                    echo "<td>". htmlspecialchars(($sv["email"])) . "</td>";
+                    echo "<td>". htmlspecialchars(($sv["ngay_tao"])) . "</td>";
+                    echo "</tr>";
+                }
+            ?>
+        </table>
+    </body>
+</html>
