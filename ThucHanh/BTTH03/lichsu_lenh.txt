@@ -1,0 +1,41 @@
+﻿try { . "d:\VSCode\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+php artisan make:migration medicines_table
+php artisan make:migration sales_table
+php artisan migrate
+php artisan migrate:reset
+php artisan migrate:refresh
+php artisan migrate:refresh
+php artisan migrate
+php artisan migrate:reset
+php artisan migrate:fresh
+php artisan make:seeder MedicineSeeder
+php artisan make:seeder SaleSeeder
+php artisan db:seed
+php artisan migrate:refresh --seed
+php artisan make:create students_table
+php artisan make:migration students_table
+php artisan make:migration classes_table
+php artisan migrate:refresh
+php artisan migrate:refresh
+php artisan migrate:reset
+php artisan migrate:refresg
+php artisan migrate:refresh
+php artisan migrate:reset
+php artisan migrate:refresh
+php artisan migrate:reset
+php artisan migate:fresh
+php artisan migrate:fresh
+php artisan migrate:refresh
+php artisan migrate:fresh
+php artisan migrate:reset
+php artisan migrate:fresh
+php artisan migrate:fresh
+php artisan migrate
+php artisan db:seed --class=MedicineSeeder
+php artisan migrate:fresh
+php artisan db:seed
+php artisan make:seeder StudentSeeder
+php artisan make:seeder ClassSeeder
+php artisan migrate:fresh
+php artisan db:seed
+php artisan db:seed
